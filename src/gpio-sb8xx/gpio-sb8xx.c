@@ -28,11 +28,16 @@
  * License version 2. This program is licensed "as is" without any
  * warranty of any kind, whether express or implied.
  */
+#include <linux/version.h>
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/io.h>
 #include <linux/ioport.h>
 #include <linux/gpio.h>
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(6,6,0)
+#include <linux/seq_file.h>
+#include <linux/gpio/driver.h>
+#endif
 #include <linux/pci.h>
 #include <linux/spinlock.h>
 #include <linux/acpi.h>
