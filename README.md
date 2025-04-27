@@ -26,6 +26,13 @@ sudo /bin/sh n40_led.sh 0 100 # Switch the Health LED to orange
 sudo /bin/sh n40_led.sh 100 100 # Switch the Health LED to pink (blue+orange)
 sudo /bin/sh n40_led.sh 5 5 # Reduce the brightness of the pink
 
+# Install only gpio-sb8xx.ko
+cd hp_n36-40-54l_health_led_drivers/src/gpio-sb8x
+make
+sudo make install
+
+# New example script
+sudo /bin/sh nn40_led.sh 1 1 # Switch off all LED
 ```
 
 ## About the Health LED
@@ -72,3 +79,7 @@ Copyright (C) 2010 Antonio Galea, modified by Sergio Tanzilli.
 You'll need to [blacklist](https://wiki.debian.org/KernelModuleBlacklisting) the *sp5100_tco* watchdog driver. I don't believe this watchdog works on the Microservers.
 
 It's possible to provoke a kernel panic by removing the *i2c-piix4* driver while using the GPIO pins via the *gpio-sb8xx* driver. Don't do that.
+
+### Kernel Version
+legacy GPIO works up to kernel version 6.6.x
+script [nn40_led.sh] 

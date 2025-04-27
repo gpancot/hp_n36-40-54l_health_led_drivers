@@ -5,3 +5,5 @@ all:
 	$(MAKE) -C $(KDIR) M=$(PWD) modules
 clean:
 	$(MAKE) -C $(KDIR) M=$(PWD) clean
+install:
+	cp gpio-sb8xx.ko /lib/modules/$(KVER)/kernel/drivers/gpio/
