@@ -82,4 +82,4 @@ It's possible to provoke a kernel panic by removing the *i2c-piix4* driver while
 
 ### Kernel Version
 legacy GPIO works up to kernel version 6.6.x
-script [nn40_led.sh] 
+see script nn40_led.sh 
