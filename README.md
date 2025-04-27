@@ -81,5 +81,4 @@ You'll need to [blacklist](https://wiki.debian.org/KernelModuleBlacklisting) the
 It's possible to provoke a kernel panic by removing the *i2c-piix4* driver while using the GPIO pins via the *gpio-sb8xx* driver. Don't do that.
 
 ### Kernel Version
-legacy GPIO works up to kernel version 6.6.x
-see script nn40_led.sh 
+legacy GPIO works up to kernel version 6.6.x (script nn40_led.sh) 
